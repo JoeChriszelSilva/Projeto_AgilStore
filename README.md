@@ -1,37 +1,77 @@
-AgilStore – Gerenciamento de Produtos (CLI)
+# 🏬 AgilStore – Gerenciamento de Produtos
 
-Aplicação de linha de comando desenvolvida em Node.js para gerenciamento de inventário de produtos.
-O sistema permite realizar operações de cadastro, listagem, atualização, exclusão e busca de produtos, com persistência dos dados em arquivo JSON.
+Este projeto foi desenvolvido como parte do **processo seletivo da Acelerador Ágil**.
 
-Projeto desenvolvido para o processo seletivo da Acelerador Ágil.
+A aplicação consiste em um **sistema de gerenciamento de produtos em terminal**, permitindo o controle básico de estoque de uma loja fictícia chamada **AgilStore**, com persistência de dados em arquivo JSON.
 
-🚀 Funcionalidades
+---
 
-Adicionar produtos ao inventário
+## 📌 Funcionalidades
 
-Listar todos os produtos cadastrados
+- Cadastrar produtos
+- Listar produtos cadastrados
+- Atualizar informações de produtos
+- Remover produtos
+- Buscar produtos por **ID** ou **nome**
+- Persistência de dados em arquivo JSON
 
-Atualizar informações de um produto pelo ID
+---
 
-Excluir produtos do inventário
+## 🛠️ Tecnologias Utilizadas
 
-Buscar produtos por ID ou nome
+- **Node.js**
+- **JavaScript (ES Modules)**
+- **readline-sync** (entrada de dados via terminal)
+- **File System (fs)** para leitura e escrita de arquivos JSON
 
-Persistência automática dos dados em arquivo JSON
+---
 
-🛠️ Tecnologias Utilizadas
+## ▶️ Como rodar a aplicação localmente
 
-Node.js
+### Pré-requisitos
 
-JavaScript (ES Modules)
+Antes de iniciar, é necessário ter instalado na máquina:
 
-API nativa readline para interação via terminal
+- **Node.js** (versão 18 ou superior)
+- **npm** (gerenciador de pacotes do Node.js)
 
-Arquivo JSON para persistência de dados
+---
 
-Orientação a Objetos e separação de responsabilidades
+### Passo a passo
 
-📁 Estrutura do Projeto
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/agilstore.git
+Acesse a pasta do projeto:
+
+bash
+cd Projeto_AgilStore
+Instale as dependências:
+
+bash
+npm install
+Execute a aplicação:
+
+bash
+npm start
+Funcionamento da aplicação
+Após executar o comando npm start, a aplicação será iniciada no terminal, exibindo um menu interativo que permite ao usuário:
+
+Gerenciar o estoque de produtos
+
+Inserir, editar, remover e buscar itens
+
+Visualizar os dados atualizados em tempo real
+
+Os produtos são armazenados localmente no arquivo:
+
+txt
+/data/produtos.json
+Esse arquivo é criado automaticamente caso não exista.
+
+📂 Estrutura do Projeto
+txt
+
 AgilStore/
 ├── src/
 │   ├── models/
@@ -40,56 +80,27 @@ AgilStore/
 │   │   └── Inventory.js
 │   ├── menu.js
 │   └── index.js
-└── data/
-    └── produtos.json
+├── data/
+│   └── produtos.json
+├── package.json
+└── README.md
+🎯 Objetivo do Projeto
+Demonstrar conhecimentos em:
 
-▶️ Como Rodar a Aplicação Localmente
-Pré-requisitos
+Lógica de programação
 
-Node.js versão 18 ou superior instalado
+Organização de código
 
-Passos
+Manipulação de arquivos
 
-Clone o repositório:
+Uso de classes e módulos
 
-git clone https://github.com/seu-usuario/agilstore.git
+Desenvolvimento de aplicações em Node.js via terminal
 
+📄 Observações
+Projeto desenvolvido para fins avaliativos.
 
-Acesse a pasta do projeto:
+Não utiliza banco de dados externo.
 
-cd AgilStore
+Persistência feita via arquivo JSON local.
 
-
-Execute a aplicação:
-
-node src/index.js
-
-
-ou, se preferir:
-
-npm start
-
-💾 Persistência de Dados
-
-Os produtos são armazenados no arquivo:
-
-data/produtos.json
-
-
-O sistema trata automaticamente os seguintes cenários:
-
-Arquivo inexistente
-
-Arquivo vazio
-
-Conteúdo inválido
-
-Garantindo que a aplicação funcione corretamente mesmo na primeira execução.
-
-📌 Observações Técnicas
-
-O projeto utiliza módulos ES (import/export), definidos via "type": "module" no package.json.
-
-Não são utilizadas dependências externas para entrada de dados, apenas recursos nativos do Node.js.
-
-O código foi estruturado visando clareza, organização e facilidade de manutenção.
